@@ -1,0 +1,48 @@
+body {
+  background-color: $primaryBackgroundColor;
+  color: $primaryTextColor;
+
+  font-family: $primaryFontFamily;
+  font-size: $primaryFontSize;
+  font-weight: $primaryFontWeight;
+  line-height: $primaryLineHeight;
+  letter-spacing: $primaryLetterSpacing;
+}
+
+/* Утилиты */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  padding: 0;
+  border: none;
+  background: none;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-align: center;
+
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}

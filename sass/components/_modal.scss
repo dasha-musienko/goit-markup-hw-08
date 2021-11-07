@@ -1,0 +1,235 @@
+/* Модальное окно */
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  z-index: 2;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop--is-hidden {
+  opacity: 0;
+}
+
+.backdrop--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-height: 581px;
+  min-width: 528px;
+
+  background-color: $primaryBackgroundColor;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  padding: 0;
+  border: none;
+  background: none;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.modal__icon {
+  fill: $blackColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__button:hover .modal__icon {
+  fill: $accentColor;
+}
+.modal__label {
+  margin-bottom: 12px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: $primaryLetterSpacing;
+
+  color: #212121;
+}
+.field {
+  display: block;
+  margin-bottom: 10px;
+}
+.field__label {
+  margin-bottom: 4px;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+
+  color: $titleTextColor;
+}
+
+.field__area {
+  position: relative;
+}
+.field__input {
+  padding: 11px 12px 11px 40px;
+  width: 448px;
+  height: 40px;
+  left: 576px;
+  top: 314px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field__input:focus-within + .field__icon {
+  fill: $accentColor;
+}
+
+.field__input:focus,
+.field__input:hover {
+  border-color: $accentColor;
+}
+
+.field__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.field__textarea {
+  resize: none;
+  padding: 12px 16px;
+
+  width: 448px;
+  height: 120px;
+  left: 576px;
+  top: 518px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.field__textarea:focus,
+.field__textarea:hover {
+  border-color: $accentColor;
+}
+.field__textarea::placeholder {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 425px;
+}
+
+.checkbox__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  background-image: url(../images/vector.svg);
+  background-size: contain;
+}
+
+.checkbox__text {
+  display: inline-block;
+}
+
+.checkbox__legal:checked + .checkbox__icon {
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+}
+.checkbox__legal {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.checkbox__policy {
+  font-weight: normal;
+  font-size: $primaryFontSize;
+  line-height: $primaryLineHeight;
+
+  letter-spacing: $primaryLetterSpacing;
+  text-decoration-line: underline;
+
+  color: $accentColor;
+}
+
+.modal--submit {
+  margin: 30px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 712px;
+
+  background: $accentColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.button__text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: $primaryBackgroundColor;
+}

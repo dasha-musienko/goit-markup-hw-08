@@ -1,0 +1,168 @@
+/* Футер */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #2f303a;
+}
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socials {
+  margin-top: 14px;
+  margin-left: 70px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: $primaryBackgroundColor;
+}
+.footer__address {
+  font-style: normal;
+  color: $primaryBackgroundColor;
+}
+.footer__item {
+  margin-top: 9px;
+}
+.footer__address-info {
+  display: inline-block;
+
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: $primaryFontWeight;
+  line-height: $primaryLineHeight;
+  letter-spacing: $primaryLetterSpacing;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.socials__title {
+  font-weight: bold;
+  font-size: $primaryFontSize;
+  line-height: 1, 14;
+  letter-spacing: $primaryLetterSpacing;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: $primaryBackgroundColor;
+}
+
+.socials__container {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  height: 44px;
+  flex-wrap: wrap;
+}
+
+.social__area {
+  width: 44px;
+  height: 44px;
+
+  background-color: #ffffff10;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
+
+.socials__icon {
+  display: block;
+  margin: 12px;
+
+  fill: $primaryBackgroundColor;
+}
+
+.footer form {
+  margin-top: 14px;
+  margin-left: auto;
+
+  display: flex;
+}
+.footer__label {
+  display: flex;
+  flex-direction: column;
+
+  & input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: $primaryLetterSpacing;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer__text-input {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1, 14;
+  letter-spacing: $primaryLetterSpacing;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: $primaryBackgroundColor;
+}
+
+.footer__email {
+  padding: 15px 16px;
+  display: inline-block;
+  width: 358px;
+  height: 50px;
+  left: 815px;
+  top: 2787px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  color: $primaryBackgroundColor;
+}
+
+.footer__button {
+  margin-left: 12px;
+  margin-top: 43px;
+  display: flex;
+  align-items: center;
+  padding: 10px 28px;
+  width: 200px;
+  height: 50px;
+
+  background-color: $accentColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.button-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: $primaryBackgroundColor;
+}
+
+.footer__send-icon {
+  margin-left: auto;
+}
