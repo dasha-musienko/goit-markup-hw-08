@@ -1,11 +1,15 @@
 // /* // our team */
-.team__container {
-  padding: 60px 15px;
+.team {
+  padding-bottom: 60px;
+  padding-top: 60px;
 
   background-color: #f5f4fa;
   @media screen and (min-width: 1200px) {
     padding: 94px 0;
   }
+}
+.team__container {
+  padding: 0 15px;
 }
 
 .team__title {

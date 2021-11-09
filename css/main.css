@@ -49,6 +49,12 @@ a {
   color: inherit;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Модальное окно */
 .backdrop {
   width: 100vw;
@@ -70,6 +76,16 @@ a {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 40px;
+}
+
+@media screen and (max-width: 449px) {
+  .modal-window {
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 @media screen and (min-width: 450px) {
@@ -157,6 +173,10 @@ a {
   border-radius: 4px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .form-input:focus {
@@ -348,6 +368,12 @@ a {
   width: 425px;
 }
 
+@media screen and (max-width: 449px) {
+  .checkbox {
+    width: 300px;
+  }
+}
+
 .checkbox__icon {
   display: inline-block;
   width: 16px;
@@ -355,6 +381,7 @@ a {
   margin-right: 8px;
   background-image: url(../images/vector.svg);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .checkbox__text {
@@ -366,6 +393,12 @@ a {
   /* identical to box height */
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (max-width: 449px) {
+  .checkbox__text {
+    width: 200px;
+  }
 }
 
 .checkbox__legal:checked + .checkbox__icon {
@@ -416,6 +449,15 @@ a {
     padding: 0 15px;
     margin: 0 auto;
   }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .header__container {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .main-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -459,19 +501,24 @@ a {
     margin: 16px 0;
   }
   .menu-container {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #ffffff;
     padding: 48px 40px;
+    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
     position: fixed;
     overflow-y: scroll;
   }
   .menu-container.is-open {
+    visibility: visible;
+    opacity: 1;
     display: block;
     padding: 48px 40px;
   }
@@ -531,6 +578,16 @@ a {
     letter-spacing: 0.02em;
     color: #2196f3;
   }
+}
+
+@media screen and (max-width: 767px) and (max-width: 380px) {
+  .address__item.tel {
+    font-size: 24px;
+    line-height: 44px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .address__item.mail {
     font-weight: 500;
     font-size: 24px;
@@ -588,6 +645,12 @@ a {
 @media screen and (max-width: 767px) and (max-width: 443px) {
   .third-nav__social {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) and (max-width: 380px) {
+  .third-nav__social {
+    font-size: 10px;
   }
 }
 
@@ -821,15 +884,8 @@ a {
 @media screen and (min-width: 1200px) {
   .hero__container {
     height: 600px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin: 0 auto;
+    padding: 200px 0;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main/desktop/background-1x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main/desktop/background-1x.jpg");
   }
@@ -860,6 +916,12 @@ a {
 @media screen and (min-width: 1200px) {
   .hero__item {
     width: 696px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero__item {
+    width: 300px;
   }
 }
 
@@ -903,14 +965,19 @@ a {
   color: #ffffff;
 }
 
-.features__container {
-  padding: 60px 15px;
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
-  .features__container {
+  .features {
     padding: 94px 0;
   }
+}
+
+.features__container {
+  padding: 0 15px;
 }
 
 .features__list {
@@ -1116,15 +1183,20 @@ a {
   color: #ffffff;
 }
 
-.team__container {
-  padding: 60px 15px;
+.team {
+  padding-bottom: 60px;
+  padding-top: 60px;
   background-color: #f5f4fa;
 }
 
 @media screen and (min-width: 1200px) {
-  .team__container {
+  .team {
     padding: 94px 0;
   }
+}
+
+.team__container {
+  padding: 0 15px;
 }
 
 .team__title {
@@ -1308,7 +1380,7 @@ img {
 }
 
 .clients {
-  padding: 60px 15px;
+  padding: 60px 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1318,6 +1390,7 @@ img {
 }
 
 .c__container {
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1469,7 +1542,7 @@ img {
 }
 
 .footer {
-  padding: 60px 15px;
+  padding: 60px 0;
   background-color: #2f303a;
 }
 
@@ -1477,6 +1550,10 @@ img {
   .footer {
     padding: 94px 0;
   }
+}
+
+.footer__area {
+  padding: 0 15px;
 }
 
 .footer__container {
@@ -1551,6 +1628,9 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer__primary {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-right: 70px;
     width: 231px;
     margin: 0 70px 0 0;
@@ -1616,6 +1696,12 @@ img {
   letter-spacing: 0.03em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__address-info {
+    text-align: left;
+  }
 }
 
 .footer__address-info:hover,
@@ -1707,6 +1793,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1807,6 +1896,7 @@ img {
   display: inline-block;
   margin-bottom: 20px;
   height: 50px;
+  width: 450px;
   left: 815px;
   top: 2787px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1817,6 +1907,12 @@ img {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
+}
+
+@media screen and (max-width: 455px) {
+  .footer__email {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {

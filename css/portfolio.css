@@ -49,6 +49,12 @@ a {
   color: inherit;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 767px) {
   .mobile-user-menu {
     display: none;
@@ -71,6 +77,15 @@ a {
     padding: 0 15px;
     margin: 0 auto;
   }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .header__container {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .main-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -114,19 +129,24 @@ a {
     margin: 16px 0;
   }
   .menu-container {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #ffffff;
     padding: 48px 40px;
+    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
     position: fixed;
     overflow-y: scroll;
   }
   .menu-container.is-open {
+    visibility: visible;
+    opacity: 1;
     display: block;
     padding: 48px 40px;
   }
@@ -186,6 +206,16 @@ a {
     letter-spacing: 0.02em;
     color: #2196f3;
   }
+}
+
+@media screen and (max-width: 767px) and (max-width: 380px) {
+  .address__item.tel {
+    font-size: 24px;
+    line-height: 44px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .address__item.mail {
     font-weight: 500;
     font-size: 24px;
@@ -243,6 +273,12 @@ a {
 @media screen and (max-width: 767px) and (max-width: 443px) {
   .third-nav__social {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) and (max-width: 380px) {
+  .third-nav__social {
+    font-size: 10px;
   }
 }
 
@@ -497,6 +533,7 @@ a {
   letter-spacing: 0.03em;
   color: #afb1b8;
   background-color: #f5f4fa;
+  color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -553,6 +590,7 @@ a {
 }
 
 .portfolio__project {
+  border: 1px solid #eeeeee;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -587,7 +625,9 @@ a {
           flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid #eeeeee;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -641,6 +681,11 @@ a {
           transform: translateY(-294px);
 }
 
+.portfolio__project:focus .portfolio__caption {
+  -webkit-transform: translateY(-294px);
+          transform: translateY(-294px);
+}
+
 .portfolio__text {
   position: absolute;
   top: 50%;
@@ -668,6 +713,9 @@ a {
 
 .portfolio__description {
   padding: 20px 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .portfolio__title {
@@ -687,7 +735,7 @@ a {
 }
 
 .footer {
-  padding: 60px 15px;
+  padding: 60px 0;
   background-color: #2f303a;
 }
 
@@ -695,6 +743,10 @@ a {
   .footer {
     padding: 94px 0;
   }
+}
+
+.footer__area {
+  padding: 0 15px;
 }
 
 .footer__container {
@@ -769,6 +821,9 @@ a {
 
 @media screen and (min-width: 1200px) {
   .footer__primary {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-right: 70px;
     width: 231px;
     margin: 0 70px 0 0;
@@ -834,6 +889,12 @@ a {
   letter-spacing: 0.03em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__address-info {
+    text-align: left;
+  }
 }
 
 .footer__address-info:hover,
@@ -925,6 +986,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1025,6 +1089,7 @@ a {
   display: inline-block;
   margin-bottom: 20px;
   height: 50px;
+  width: 450px;
   left: 815px;
   top: 2787px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1035,6 +1100,12 @@ a {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
+}
+
+@media screen and (max-width: 455px) {
+  .footer__email {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {

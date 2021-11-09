@@ -1,12 +1,13 @@
 // clients
 .clients {
-  padding: 60px 15px;
+  padding: 60px 0;
 
   @media screen and (min-width: 1200px) {
     padding: 94px 0;
   }
 }
 .c__container {
+  padding: 0 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
