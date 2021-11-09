@@ -45,20 +45,6 @@
     z-index: 1000;
   }
 
-  .menu-container.is-open .icon-cross {
-    fill: #212121;
-  }
-
-  .menu-button:hover,
-  .menu-button:focus .icon-cross {
-    fill: $accentColor;
-  }
-
-  .menu-button:hover,
-  .menu-button:focus .icon-menu {
-    fill: $accentColor;
-  }
-
   .menu-button .icon-cross {
     display: none;
   }
@@ -66,8 +52,6 @@
     position: fixed;
     top: 10px;
     right: 15px;
-
-    fill: #212121;
   }
   .menu-button.is-open .icon-cross {
     display: block;
@@ -168,8 +152,6 @@
     }
   }
 
-  .third-nav {
-  }
   .third-nav .list {
     display: flex;
     flex-wrap: wrap;
