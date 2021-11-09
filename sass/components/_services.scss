@@ -1,6 +1,13 @@
 /* Чем мы занимаемся */
+
 .services {
-  padding-bottom: 94px;
+  @media screen and (min-width: 1200px) {
+    padding: 0 0 94px 0;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .title {
   font-weight: 700;
